@@ -10,7 +10,7 @@
 
 body
 {
-    min-height: 400vh;
+    min-height: 1000vh;
     background: #222;
 }
 
@@ -30,12 +30,13 @@ section
 
 .title
 {
-    position: aboslute;
+    position: fixed;
+    top:50%;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
-    color: #00aBff;
-    z-index: 1;
+    color: red;
+    z-index: -10;
     font-size:25vw;
 }
 .inner-title
