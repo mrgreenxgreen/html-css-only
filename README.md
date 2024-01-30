@@ -1,1 +1,1 @@
-HTML & CSS only
+HTML & CSS advanced
