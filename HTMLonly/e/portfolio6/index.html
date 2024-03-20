@@ -1,3 +1,9 @@
+<!-- This is my personal portfolio website. 
+The code might not follow clean code principles and  other similar, I don't really mind since this is not intented to 
+be developed by a team, only I.  
+author: Romeo Dave K. Dalimocon
+-->
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -35,23 +41,26 @@
             },
         };
         </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Comforter&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Comforter&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <nav
             style="position:fixed;z-index: 9999999;"
-            class="relative flex w-full flex-wrap items-center justify-between bg-transparent  py-2 shadow-dark-mild dark:bg-transparent lg:py-4"
+            class="relative flex w-full flex-wrap items-center justify-between bg-transparent  py-2 shadow-dark-mild dark:bg-transparent lg:py-4 "
             data-twe-navbar-ref>
             <div class="flex w-full flex-wrap items-center justify-between px-3">
-                <div class="flex flex-row lg:gap-4 sm:gap-2">
+                <div class="flex flex-row lg:gap-6 sm:gap-2">
                 <!-- Avatar -->
                 <div class="relative ms-3 flex " data-twe-dropdown-ref>
                 <a
                     class="flex items-center whitespace-nowrap text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
-                    href="#"
+                    href="profile.html"
                     id="navbarDropdownMenuLink"
                     role="button"
                     data-twe-dropdown-toggle-ref
@@ -59,7 +68,7 @@
                     <img
                     src="assets/profpic.jpg"
                     class="rounded-full"
-                    style="height: 50px; width: 50px"
+                    style="height: 50px; width: 50px; "
                     alt="Avatar"
                     loading="lazy" />
                 
@@ -117,7 +126,7 @@
                 </div>
                 <!-- settings -->
                 <div style="display:flex;gap:1em;align-items: center;">
-               
+<!--                
                     <button onclick="muteAudio()" id="mute-button"> <i class="fas fa-volume-up"></i></button>
                     <script>
                     function muteAudio() {
@@ -132,31 +141,37 @@
                             audio.muted = !audio.muted; // Toggle mute state
                         }
                     }
-                    </script>
-                    <i class="fa-solid fa-globe"></i>
+                    </script> -->
+                    <!-- <i class="fa-solid fa-globe"></i> -->
                 </div>
             
             </div>
             </nav>
 
             <!-- side nav -->
-            <div style="gap:2em;position:fixed;z-index:999;top:7em;height:100vh;width:95px;display:flex;flex-direction:column;align-items: center;">
+            <div id="side-nav" style="gap:2em;position:fixed;z-index:9999999;padding-top:7em;height:100vh;width:95px;display:flex;flex-direction:column;align-items: center;" class="hidden sm:block">
+                <a href="#">
                 <div>
-                    <img src="./assets/home.png" height="50" width="50">
+                    <img src="./assets/home.png" height="50" width="50" class="hidden md:hidden sm:hidden lg:block  xl:block 2xl:block">
                 </div>
-                <div style="width:50px;height:50px;background-color: rgb(60, 146, 233);border-radius:50%;display:flex;justify-content: center;">
-                    <img src="./assets/profile.png" height="50" width="40">
+                </a>
+                <a href="profile.html">
+                <div style="width:50px;height:50px;background-color: rgb(60, 146, 233);border-radius:50%;" class="hidden md:hidden sm:hidden lg:block  xl:block 2xl:block">
+                    <img src="./assets/profile.png" height="50" width="40" class="mx-auto hidden sm:block">
                 </div>
-                <div style="width:50px;height:50px;background-color: rgb(57, 128, 250);border-radius:50%;display:flex;justify-content: center;">
-                    <img src="./assets/folder.png" height="30" width="42.5" />
+                </a>
+                <a href="#projects">
+                <div style="width:50px;height:50px;background-color: rgb(57, 128, 250);border-radius:50%;" class="hidden md:hidden sm:hidden lg:block  xl:block 2xl:block">
+                    <img src="./assets/folder.png" height="30" width="42.5" class="hidden sm:block" />
                 </div>
+                </a>
             </div>
 
         </header>
         <main>
             <div class="homebody">
                 <!-- main buttons -->
-                <div style="position:fixed;z-index:9999; bottom:8em;width:100vw;display:flex;justify-content: center;" class="gap-3">
+                <div style="position:fixed;z-index:9999; bottom:7.5em;width:100vw;display:flex;justify-content: center;" class="gap-3">
                   
                     <button class="button-47" role="button"> &#8681; Résumé </button>
                   
@@ -166,14 +181,14 @@
                 </div>
 
                 <!-- background music -->
-                <div style="position:fixed;bottom:4em;left:0;z-index: 9999;border-radius:25px;display:none;">
+                <!-- <div style="position:fixed;bottom:4em;left:0;z-index: 9999;border-radius:25px;display:none;">
                     <audio controls autoplay id="bg-music" loop>
                         <source src="ofate.mp3" type="audio/mpeg" >
                         Your browser does not support the audio element.
                     </audio> 
                     <button id="volume-control">
                         <i class="fas fa-volume-up"></i>  </button>
-                </div>
+                </div> -->
                 <script>
                     $('.speaker').click(function(e) {
                     e.preventDefault();
@@ -188,6 +203,9 @@
                 <section id="techstack">
                     <!-- <h2 class="inner-title">RDKD</h2> -->
                     <h1>sdkfjhskhfksdh</h1>
+                    <div style="border-radius:50%;box-shadow:0px 0px 400px 10px yellow;position:fixed;height:800px;width:803px;display:flex;justify-content: center;align-items: center;">
+                    <img id="magiccircle" src="./assets/magic4.png" style="height:780px;width:780px;position:fixed;opacity:0.5;"/>
+                  </div>
                     <!-- <div style="display:flex;justify-content:center;width:100vw;height:1500px;background:radial-gradient(rgb(87, 0, 87),black 70%);"> -->
                         <div class="invoker">
                             <img src="./assets/img/Invoker.png" alt="Invoker" style ="position:absolute;z-index:999;"/>
@@ -252,22 +270,22 @@
                     </div>
                     <!-- message -->
                   
-                    <div style="width:100vw;height:100vh;font-size:5em;display:flex;flex-direction: column;justify-content:center;align-items: flex-start;padding-left:1em;position:fixed;z-index:-888;">
-                        <div style="margin-top:5.5em;">
-                        <h1 id="tagline">Knowledge is Power</h1>
+                    <div style="width:100vw;height:100vh;font-size:75px;display:flex;flex-direction: column;justify-content:center;align-items: flex-start;padding-left:1em;position:fixed;z-index:-888;" >
+                        <div style="margin-top:5.5em;" >
+                        <h1 id="tagline" >Knowledge is Power</h1>
                         <p id="tagbodyline">
-                            The bliss of comprehension and profundities  in the creation of software applications are mine to carry through out the sldc.
+                            The bliss of comprehension and profundities  in the design and creation of groundbreaking state of the art software applications
                         </p>
                     </div>
                     </div>
-                      <div style="width:100vw;height:100vh;display:flex;align-items:flex-end;font-size:5em;z-index:-888;flex-direction: column;padding:20px;position:fixed;opacity:0.7;">
-                        <div style="width:300px;text-align:justify;border:none;margin:50px;">
-                        <h1  style="font-size:30px;font-weight:450">About me</h1>
-                        <p style="font-size:15px;">
+                      <div style="width:100vw;height:100vh;display:flex;align-items:flex-end;font-size:5em;z-index:-222;flex-direction: column;position:fixed;opacity:1;">
+                        <div style="padding:0x;width:300px;text-align:justify;border:none;" class="hidden 2xl:block xl:block lg:mx-16 block mt-16 md:hidden sm:hidden">
+                        <!-- <h1 id="aboutme" style="font-size:30px;font-weight:450">About me</h1> -->
+                        <p id="aboutmebody" style="font-size:15px;">
                             <br/>
                             I'm looking for a professional web app developer role. I got freelance full-stack experience from scratch up to deployment. 
-                            <br/><br/>
-                            I experienced  developing apps with multiple back-end frameworks, front-end frameworks and web service providers like React, Angular, Spring, .Net, AWS etc.
+                            <!-- <br/><br/>
+                            I experienced  developing apps with multiple back-end frameworks, front-end frameworks and web service providers like React, Angular, Spring, .Net, AWS etc. -->
                            
                             <br/><br/>
                             I first started with HTML, CSS, JS, and PHP. Then, I tried to master Spring - Java such as Spring boot, JPA,Hibernate, oAuth2.0. Eventually, I learned MERN stack and TypeScript.
@@ -287,9 +305,9 @@
 
                 </div>
                 <!-- projects section here -->
-                <div id="projects" style="width:100vw;min-height:105vh;margin-top:4200px;position:absolute;z-index:999;display:flex;justify-content: center;"  class="pb-16 sm:pb-0">
-                    <div id="projects" style="width:1240px;min-height:105vh;background-color: rgba(65, 0, 93, 0.765);backdrop-filter: blur( 4px );-webkit-backdrop-filter: blur( 4px );padding:2em;" >
-                        <h2 class="mb-12 text-center text-3xl font-bold mt-12" >Latest articles</h2>
+                <div  style="width:100vw;height:100vh;margin-top:4200px;position:absolute;z-index:999;display:flex;justify-content: center;align-items: center;"  class="pb-16 sm:pb-0">
+                    <div id="projects" style="width:1200px;background-color: rgba(65, 0, 93, 0.765);backdrop-filter: blur( 4px );-webkit-backdrop-filter: blur( 4px );padding:2em;border-radius:10px;"  >
+                        <h2 class="mb-12 text-center text-3xl font-bold " >Latest articles</h2>
                             
       <div class="grid gap-6 lg:grid-cols-3">
         <div
@@ -526,11 +544,6 @@
                 </button>
                 </div>
         </footer>
-
-
-
-
-
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->

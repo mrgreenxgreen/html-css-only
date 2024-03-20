@@ -17,6 +17,9 @@ p{
   font-family: "Bungee Hairline", sans-serif;
 
 }
+h1,h2,h3,h4,h5,h6{
+  font-family: "Space Mono", monospace;
+}
 
 .homebody{
     min-height:1000px;
@@ -83,9 +86,9 @@ section
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .kidlatBox img{
-        height:300px;
-        width:300px;
-        top:2em;
+        height:222px;
+        width:222px;
+        top:7em;
     }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -93,6 +96,7 @@ section
     .kidlatBox img{
         height:222px;
         width:222px;
+        top:10em;
     }
   }
   /* Medium devices (landscape tablets, 768px and up) */
@@ -143,6 +147,10 @@ section
     .invoker-kid{
         margin-top:10em;
     }
+    .invoker-kid img{
+      height:30em;
+      width:20em;
+  }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
@@ -302,6 +310,7 @@ section
   
 /* CSS */
 .button-85 {
+  font-family: "Space Mono", monospace;
   padding: 0.6em 2em;
   border: none;
   outline: none;
@@ -372,6 +381,7 @@ section
 
 /* CSS */
 .button-47 {
+  font-family: "Space Mono", monospace;
   padding: 0.6em 2em;
   border: none;
   outline: none;
@@ -444,9 +454,76 @@ section
   animation: fadeIn 8s;
   font-size:18px;
 }
-
+/* responsive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ #tagline{
+  font-size:22.5px !important;
+ }
+ #tagbodyline{
+  display:none;
+ }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #tagline{
+    font-size:25px !important;
+   } 
+   #tagbodyline{
+    display:none;
+   }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #tagbodyline{
+    display:block;
+   }
+} 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #tagline{
+    font-size:80px !important;
+   } 
+ 
+} 
+/* about me */
+#aboutme{
+  animation: fadeIn 4s; 
+}
+#aboutmebody{
+  animation: fadeIn 10s; 
+ 
+}
 /* avatar */
 .avatar{
   font-family: "Bungee Hairline", sans-serif;
   font-weight:700;
+
+}
+
+/* scifi */
+
+nav{
+  /* border-bottom:1px solid cyan; */
+  
+}
+#side-nav{
+  /* border-bottom:1px solid cyan; */
+ 
+}
+
+#projects{
+ padding-bottom:12em !important;
+}
+
+#magiccircle{
+  animation: rotateMC 100s linear infinite;
+}
+@keyframes rotateMC {
+  0%{
+    rotate:360deg;
+  }
+  100%{
+    display:block;
+  }
 }
