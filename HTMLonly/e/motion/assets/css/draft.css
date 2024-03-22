@@ -1,0 +1,316 @@
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;    
+}
+
+body
+{
+min-height: 1000vh;
+background:linear-gradient(90deg,black,black);
+display:flex;
+justify-content:center;s
+align-items:center;
+}
+
+section
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient( white 20%,violet 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(0px at center center);
+}
+
+.title
+{
+    position: fixed;
+    top:50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: -10;
+    font-size:20vw;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+    background:linear-gradient(#cc00cc, #b30086,#cc0000);
+    background-size:cover;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+.inner-title
+{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #00aBff;
+    z-index: 2;
+    font-size:20vw;   
+    /* background-image:url("../img/belt.jpeg"); */
+    background:black;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+.container{
+    width:100vw;
+    height:fit-content;
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+}
+
+
+.kidlatBox img
+{
+    position:absolute ;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:10;
+    width:30vw;
+    height:30vw;
+    top:-14em;
+    left: -13em;
+    
+}
+
+
+.kidlatBox img:not(:first-child)
+{
+    animation: kidlat 2s linear infinite;
+    animation-delay: calc(-0.8s * var(--i));
+    opacity: 0.1;
+    
+    z-index:-5;
+    position:absolute;
+
+}
+
+@keyframes kidlat
+{
+   0% 
+    {
+       
+        rotate:5deg;
+    }
+    50%{
+        display:none;
+    }
+    100%
+    {
+       ;
+        
+
+    } 
+} 
+
+@media (min-width: 200px)  {
+  .kidlatBox img
+  {
+    width:75vw;
+    height:80vw;
+    top:-5em;
+    left:-8em;
+
+  }
+ 
+}
+@media (min-width: 800px)  {
+    .kidlatBox img
+    {
+      width:70vw;
+      height:70vw;
+      top:-15em;
+      left:-15em;
+  
+    }
+   
+  }
+@media (min-width: 1024px){
+    .kidlatBox img
+   {
+    width:30vw;
+    height:30vw;
+    top:-20em;
+    left: -20em; 
+} 
+}
+
+
+ 
+/* .imgBX
+{
+    position: relative;
+    width: 100rem;
+    height: 100px;
+} */
+.imgBx img
+{
+    position:absolute ;
+    left:22%;
+    z-index:-1;
+    width:50%; 
+    height:100%;
+    
+}
+
+
+.imgBx img:not(:first-child)
+{
+    animation: animate1 4s linear infinite;
+    animation-delay: calc(-0.8s * var(--i));
+    opacity: 0.1;
+   
+    z-index:-5;
+    position:absolute;
+
+}
+
+@keyframes animate1
+{
+   0% 
+    {
+        margin-top: 100px;
+        margin-left: 80px;
+    }
+    100%
+    {
+        margin-top:1px;
+        margin-left: 1px;
+
+    } 
+} 
+
+@media (max-width: 680px)  {
+  .imgBx img
+  {
+    left:0%;
+    width:100%;
+
+  }
+ 
+}
+
+
+.invoker{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    index:-1; position:absolute;
+    top:35%;
+    
+        animation: floating 2s ease-in-out infinite;
+      
+
+      
+    
+        animation: bouncing 1.8s ease-in-out infinite;
+      
+      
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes bouncing {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, -20px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  
+.containerStack .icon{
+    position: relative;
+    left: -50%;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.containerStack .icon .imgBx{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    /* border-radius: 50%; */
+    transition: 0.5s;
+    /* border:1px solid #fff; */
+   /* box-shadow: 0 0 0 4px #222,
+   0 0 0 6px #fff; */
+   transform: rotate(calc(360deg/8 * var(--i)));
+   transform-origin: 500px;
+   z-index: 150;
+   overflow: visible;
+ 
+}
+
+.containerStack .icon .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    object-fit:cover;
+    transform: rotate(calc(-360deg/8 * var(--i)));
+}
+
+@keyframes rotateContainer {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .containerStack {
+    top:-20em;
+    position: relative;
+    width:1000px;
+    height: 1000px;
+    /* border: 2px solid #fff; */
+    border-radius: 50%;
+    animation: rotateContainer 20s linear infinite;
+    
+  }
