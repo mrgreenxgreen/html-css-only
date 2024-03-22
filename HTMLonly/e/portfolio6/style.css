@@ -17,6 +17,9 @@ p{
   font-family: "Bungee Hairline", sans-serif;
 
 }
+h1,h2,h3,h4,h5,h6{
+  font-family: "Space Mono", monospace;
+}
 
 .homebody{
     min-height:1000px;
@@ -30,7 +33,7 @@ section
     width: 100%;
     height: 100%;
     background: radial-gradient( orange 20% ,darkviolet 100% );
-    background-image:url("./assets/nebula.jpg");
+    background-image:url("./assets/nebula4.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,9 +86,9 @@ section
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .kidlatBox img{
-        height:300px;
-        width:300px;
-        top:2em;
+        height:222px;
+        width:222px;
+        top:7em;
     }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -93,6 +96,7 @@ section
     .kidlatBox img{
         height:222px;
         width:222px;
+        top:10em;
     }
   }
   /* Medium devices (landscape tablets, 768px and up) */
@@ -100,6 +104,7 @@ section
     .kidlatBox img{
         height:444px;
         width:444px;
+        top:2.5em;
         
     } 
   } 
@@ -143,6 +148,10 @@ section
     .invoker-kid{
         margin-top:10em;
     }
+    .invoker-kid img{
+      height:30em;
+      width:20em;
+  }
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
@@ -254,15 +263,15 @@ section
 }
 .containerStack .icon .imgBx{
     position: absolute;
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     /* border-radius: 50%; */
     transition: 0.5s;
     /* border:1px solid #fff; */
    /* box-shadow: 0 0 0 4px #222,
    0 0 0 6px #fff; */
    transform: rotate(calc(360deg/8 * var(--i)));
-   transform-origin: 500px;
+   transform-origin: 375px;
    z-index: 150;
    overflow: visible;
  
@@ -288,10 +297,11 @@ section
   }
   
   .containerStack {
-    top:-20em;
+    top:-12em;
+    left:0.5em;
     position: relative;
-    width:1000px;
-    height: 1000px;
+    width:750px;
+    height: 750px;
     /* border: 2px solid #fff; */
     border-radius: 50%;
     animation: rotateContainer 40s linear infinite;
@@ -302,6 +312,9 @@ section
   
 /* CSS */
 .button-85 {
+  /* font-family: "Space Mono", monospace; */
+  /* font-family: "Bungee Hairline", sans-serif; */
+
   padding: 0.6em 2em;
   border: none;
   outline: none;
@@ -372,6 +385,10 @@ section
 
 /* CSS */
 .button-47 {
+  /* font-family: "Space Mono", monospace; */
+  
+  /* font-family: "Bungee Hairline", sans-serif; */
+
   padding: 0.6em 2em;
   border: none;
   outline: none;
@@ -444,9 +461,76 @@ section
   animation: fadeIn 8s;
   font-size:18px;
 }
-
+/* responsive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ #tagline{
+  font-size:22.5px !important;
+ }
+ #tagbodyline{
+  display:none;
+ }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #tagline{
+    font-size:25px !important;
+   } 
+   #tagbodyline{
+    display:none;
+   }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #tagbodyline{
+    display:block;
+   }
+} 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #tagline{
+    font-size:80px !important;
+   } 
+ 
+} 
+/* about me */
+#aboutme{
+  animation: fadeIn 4s; 
+}
+#aboutmebody{
+  animation: fadeIn 10s; 
+ 
+}
 /* avatar */
 .avatar{
   font-family: "Bungee Hairline", sans-serif;
   font-weight:700;
+
+}
+
+/* scifi */
+
+nav{
+  /* border-bottom:1px solid cyan; */
+  
+}
+#side-nav{
+  /* border-bottom:1px solid cyan; */
+ 
+}
+
+#projects{
+ padding-bottom:12em !important;
+}
+
+#magiccircle{
+  animation: rotateMC 100s linear infinite;
+}
+@keyframes rotateMC {
+  0%{
+    rotate:360deg;
+  }
+  100%{
+    display:block;
+  }
 }
